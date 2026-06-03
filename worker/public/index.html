@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apostate Leaks - Mishandling of Personal Data of UK Scientologists and Cult-Abuse Survivors</title>
+    <meta
+      name="description"
+      content="East Grinstead residents—including current Scientology members—appear in data circulated without adequate safeguards, with exposure often framed as victims’ problem. This site maps only aggregated data and highlights the double standard of condemning Scientology’s data abuse while similar handling continues."
+    />
+    <link rel="canonical" href="https://apostateleaks.cultpodcasts.com/" />
+    <meta property="og:site_name" content="Apostate Leaks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://apostateleaks.cultpodcasts.com/" />
+    <meta
+      property="og:title"
+      content="Apostate Leaks - Mishandling of Personal Data of UK Scientologists and Cult-Abuse Survivors"
+    />
+    <meta
+      property="og:description"
+      content="East Grinstead: residents and current Scientology members in data circulated without proper safeguards—exposure framed as victims’ problem. Condemning Scientology for mishandling personal data while similar patterns continue."
+    />
+    <meta
+      property="og:image"
+      content="https://apostateleaks.cultpodcasts.com/og-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Apostate Leaks: East Grinstead residents and Scientology members—personal data mishandled and leaks framed as victims’ fault; condemning Scientology’s data abuse while similar handling continues."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Apostate Leaks - Mishandling of Personal Data of UK Scientologists and Cult-Abuse Survivors"
+    />
+    <meta
+      name="twitter:description"
+      content="East Grinstead residents &amp; Scientology members—data circulated without safeguards, victims blamed. The double standard: criticising Scientology’s data abuse while similar handling continues."
+    />
+    <meta
+      name="twitter:image"
+      content="https://apostateleaks.cultpodcasts.com/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Apostate Leaks share card: East Grinstead data, victim-blaming, and double standard on personal information."
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="audit-bar" aria-label="Open source and deployment provenance">
+      <div class="audit-bar__inner">
+        <span class="audit-bar__brand">Apostate Leaks</span>
+        <span class="audit-bar__sep" aria-hidden="true">·</span>
+        <a
+          id="audit-source-link"
+          class="audit-bar__github"
+          href="https://github.com/cultpodcasts/apostate-leaks"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="audit-bar__icon" viewBox="0 0 16 16" aria-hidden="true" width="18" height="18">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            />
+          </svg>
+          <span id="audit-source-link-label">View source at commit</span>
+        </a>
+        <span class="audit-bar__sep" aria-hidden="true">·</span>
+        <span id="build-provenance" class="audit-bar__provenance"></span>
+        <span class="audit-bar__sep" aria-hidden="true">·</span>
+        <div class="audit-bar__actions">
+          <span id="auth-logout-wrap" class="audit-bar__logout" hidden>
+            <a href="/auth/logout" class="audit-bar__logout-link">Sign out</a>
+          </span>
+          <div class="font-controls" role="group" aria-label="Text size">
+            <button type="button" class="font-controls__btn" data-font="normal" aria-pressed="true">
+              A
+            </button>
+            <button type="button" class="font-controls__btn" data-font="large" aria-pressed="false">
+              A+
+            </button>
+            <button type="button" class="font-controls__btn" data-font="xlarge" aria-pressed="false">
+              A++
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidebar">
+    <aside class="sidebar-panel sidebar-panel--ethics">
+      <details class="sidebar-disclosure">
+        <summary id="ethics-heading">Ethical considerations</summary>
+        <div class="sidebar-panel__body">
+          <p class="ethics-lead">
+            This map publishes <strong>only aggregated data</strong>. It exists
+            alongside a statement of serious concerns about the underlying
+            personal data and how it has been handled.
+          </p>
+
+          <section>
+            <h2>Report to the ICO</h2>
+            <p>
+              I have treated this matter as a <strong>personal data breach</strong>
+              under the UK General Data Protection Regulation (UK GDPR) and have
+              <strong>reported it to the Information Commissioner’s Office
+              (ICO)</strong>. I have grave concerns about the handling of these
+              datasets — including how they were compiled, shared, and what further
+              processing may be contemplated.
+            </p>
+          </section>
+
+          <section>
+            <h2>Data protection roles and processing scope</h2>
+            <p>
+              I was engaged by a third party who, so far as I can determine,
+              <strong>retains the original datasets</strong> and appears to act as
+              <strong>data controller</strong> in respect of the
+              <strong>personal data</strong> they contain (postal addresses
+              relating to identifiable <strong>data subjects</strong>, associated
+              comment text, and timestamps). I was instructed to act as
+              <strong>data processor</strong>: to carry out a defined operation of
+              <strong>processing</strong> on those datasets on the controller’s
+              behalf — <strong>data extraction</strong> from <strong>more than one
+              hundred planning-feedback forms</strong> that were <strong>not
+              designated</strong> for the profiling of local Scientologists — not
+              to determine the purposes of processing myself.
+            </p>
+            <p>
+              That instruction appeared limited and proportionate at the outset: structured
+              extraction from planning consultation responses, not profiling. It
+              did not, on its face, entail publication of location data or
+              identification of individuals. <strong>After processing was
+              completed</strong>, the controller indicated an intention to consider
+              further use of <strong>address data</strong> — a purpose and scope
+              beyond what I had been engaged to perform. That raises serious
+              questions under the principles of <strong>purpose limitation</strong>
+              (Article 5(1)(b) UK GDPR) and <strong>lawfulness, fairness, and
+              transparency</strong> (Article 5(1)(a)), and as to whether an
+              appropriate <strong>lawful basis</strong> under Article 6 exists for
+              any wider processing.
+            </p>
+            <p>
+              I did not solicit these datasets, was not party to their original
+              collection, and have not agreed to any processing beyond the initial
+              brief. I have seen no adequate <strong>Article 28</strong> processor
+              terms (or equivalent safeguards) addressing confidentiality, security,
+              sub-processing, or deletion. I have <strong>no confidence</strong> in
+              the controller’s compliance with the obligations of a data controller,
+              including confidentiality and security. By way of example only: within
+              the past fortnight, a mutual contact reported that the controller had
+              revealed to them the identity of another person that contact had
+              supplied in confidence — which reinforces my concern as to
+              <strong>integrity and confidentiality of processing</strong>.
+            </p>
+          </section>
+
+          <section>
+            <h2>Re-identification risk</h2>
+            <p>
+              Even where extracted comment text appears supportive or favourable, the
+              combination of <strong>comments</strong> with <strong>precise address
+              data</strong> materially increases the risk that data subjects can be
+              identified,
+              particularly in close-knit communities or where addresses are
+              distinctive. That is why raw datasets, addresses, and comment text are
+              not published on this site, and why only aggregated outputs — with
+              minimum cell thresholds and spatial jitter — are released.
+            </p>
+          </section>
+
+          <section>
+            <h2>Attempts to raise concerns</h2>
+            <p>
+              I have sought to raise these matters with organisations that represent
+              themselves as acting in the interests of current and former cult-members. I
+              have not received a substantive response. A meeting was scheduled and
+              subsequently <strong>cancelled without explanation</strong>. I was
+              later invited to submit material on condition that it would be relayed
+              <strong>directly to the data controller</strong> — a course I regard as
+              inappropriate where data subjects’ privacy may already be compromised
+              and where I have no confidence in that party’s handling of personal
+              data.
+            </p>
+          </section>
+
+          <section>
+            <h2>Purpose of this publication</h2>
+            <p>
+              My concern is to protect the <strong>privacy of data subjects</strong>
+              who may be affected, not to facilitate identification or targeting.
+              Organisations purporting to safeguard vulnerable persons should not
+              engage in <strong>profiling</strong> or related processing inconsistent
+              with that aim, and should not route concerns back to a controller in
+              whom I have no confidence.
+            </p>
+            <p class="privacy-note">
+              This statement records the site operator’s understanding and concerns.
+              It does not constitute legal advice. Data subjects who believe their
+              personal data have been misused may wish to contact the ICO or obtain
+              independent legal advice.
+            </p>
+          </section>
+        </div>
+      </details>
+    </aside>
+
+    <aside class="sidebar-panel">
+      <details class="sidebar-disclosure">
+        <summary id="privacy-heading">Privacy &amp; how this map works</summary>
+        <div class="sidebar-panel__body">
+          <section>
+            <h2>What this map shows</h2>
+            <p>
+              Areas where the source dataset has <strong>multiple</strong>
+              geocoded entries with comments treated as <strong>positive /
+              supportive</strong> for publication only. Colour indicates relative
+              density within
+              published hexagons. It is meant to confirm broad geographic
+              patterns for people who already know the underlying data — not to
+              locate individual homes.
+            </p>
+          </section>
+
+          <section>
+            <h2>What is stored on this website</h2>
+            <p>This site serves only static files. There is no database and no search API.</p>
+            <ul>
+              <li>
+                <strong>Published:</strong> hexagon outlines, grouped counts per
+                hex, and density <strong>bands</strong> (ranges, not exact numbers
+                in the UI).
+              </li>
+              <li>
+                <strong>Not published:</strong> original addresses, postcodes,
+                comments, timestamps, CSV rows, or coordinates of individual
+                properties.
+              </li>
+            </ul>
+            <p class="privacy-meta" id="privacy-dataset-meta">
+              Loading dataset parameters…
+            </p>
+          </section>
+
+          <section>
+            <h2>What happens before anything is published</h2>
+            <p>
+              All of the following runs <strong>offline</strong> on the operator’s
+              machine. Only the aggregated output is copied to this site:
+            </p>
+            <ol>
+              <li>
+                <strong>Publication filter</strong> — for this map only, rows whose
+                comments are not classified as positive/supporting are dropped; their
+                addresses are never geocoded for deployment.
+              </li>
+              <li>
+                <strong>Geocoding</strong> — addresses are converted to coordinates
+                locally; results are cached on disk and are not deployed.
+              </li>
+              <li>
+                <strong>Jitter</strong> — each point is shifted by a random offset
+                (about <span data-meta="jitter">130</span>m) before grouping, so
+                pins are not placed on exact building locations.
+              </li>
+              <li>
+                <strong>Hexagonal aggregation</strong> — points are combined into
+                ~<span data-meta="hexSize">460&nbsp;m</span> H3 hexagons (resolution
+                <span data-meta="h3">8</span>).
+              </li>
+              <li>
+                <strong>k-anonymity</strong> — hexagons with fewer than
+                <span data-meta="k">4</span> contributing records are discarded
+                entirely.
+              </li>
+              <li>
+                <strong>Strip &amp; audit</strong> — deploy bundles are checked to
+                ensure they do not contain addresses, postcodes, or per-property
+                coordinates.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>Preventing reverse engineering of addresses</h2>
+            <ul>
+              <li>
+                <strong>No point layer</strong> — you cannot click a house; only
+                large hex areas are shown.
+              </li>
+              <li>
+                <strong>Minimum group size (k)</strong> — isolated or rare
+                addresses never appear as a lone cell on the map.
+              </li>
+              <li>
+                <strong>Coarse cells + jitter</strong> — a hex covers many
+                buildings; jitter prevents alignment with a single doorway.
+              </li>
+              <li>
+                <strong>Zoom limit</strong> — the map cannot be zoomed in to
+                building level (max zoom 13).
+              </li>
+              <li>
+                <strong>Banded counts on hover</strong> — e.g. “5–9”, not “7 at
+                this address”.
+              </li>
+              <li>
+                <strong>No address search</strong> — there is no geocoder or lookup
+                endpoint on this site.
+              </li>
+            </ul>
+            <p class="privacy-note">
+              Someone who <em>already possesses</em> the full address list could
+              still compare it to this map. This design prevents
+              <em>new</em> identification by visitors who only see the published
+              aggregates.
+            </p>
+          </section>
+
+          <section>
+            <h2>What the colour scale means</h2>
+            <p>
+              Colours are <strong>relative</strong> within the published hexagons
+              on this map — not absolute population counts for the town.
+            </p>
+            <ul>
+              <li><strong>Lighter amber</strong> — lower density band among shown cells.</li>
+              <li><strong>Orange / red</strong> — higher density band among shown cells.</li>
+            </ul>
+            <p>
+              Hover text matches colour: each distinct total in a hex gets its
+              own shade (e.g. “7 addresses in area”, “10–11 addresses in area”). That
+              is still a <strong>group count</strong>, not an address list.
+            </p>
+            <p id="privacy-scale-context" class="privacy-meta"></p>
+          </section>
+
+          <section>
+            <h2>Verify this deployment</h2>
+            <p>
+              All map logic and privacy checks are in the public repository
+              <a
+                href="https://github.com/cultpodcasts/apostate-leaks"
+                target="_blank"
+                rel="noopener noreferrer"
+                >cultpodcasts/apostate-leaks</a
+              >. This site records the exact Git commit it was built from (see the
+              bar at the top). Compare that commit to the published
+              published map files (R2, not in public git) and run
+              <code>npm run audit</code> in <code>offline-pipeline</code> locally
+              to confirm no addresses are shipped.
+            </p>
+            <p id="privacy-build-links" class="privacy-meta"></p>
+          </section>
+
+          <section>
+            <h2>Limitations</h2>
+            <p>
+              Hexagons can still reveal that “several supportive responses came
+              from this general neighbourhood”. In very sparse areas, even grouped
+              data may feel sensitive — that is why small groups are suppressed.
+            </p>
+          </section>
+
+          <section id="privacy-policy">
+            <h2>Privacy policy</h2>
+            <p class="privacy-meta">
+              <a href="/privacy">Sign-in &amp; account privacy</a> (public — does not describe
+              restricted content above)
+            </p>
+            <p>
+              <strong>Sign-in with Auth0.</strong> Access is restricted: you must sign in via
+              <a href="https://auth0.com" target="_blank" rel="noopener noreferrer">Auth0</a> and
+              hold an authorised role. Clicking <strong>Sign in</strong> sends you to Auth0’s login
+              page; after authentication, Auth0 redirects you back here. On Auth0’s domain, Auth0 may
+              use cookies and process your data under
+              <a href="https://auth0.com/privacy" target="_blank" rel="noopener noreferrer"
+                >their privacy policy</a
+              >. We do not receive your Auth0 password.
+            </p>
+            <p>
+              <strong>Cookies on this site.</strong> We set essential cookies only (not for ads or
+              tracking): <code>al_session</code> (up to 7 days, <code>HttpOnly</code> — stores your
+              Auth0 user ID, access permissions, and email when provided) and
+              <code>al_oauth_state</code> (about 10 minutes during sign-in, for security). We do not
+              use <code>localStorage</code> for authentication. <strong>Sign out</strong> clears our
+              session cookie and ends your Auth0 session.
+            </p>
+            <p>
+              <strong>Email addresses and user IDs.</strong> When you attempt to sign in we receive
+              your Auth0 <code>sub</code> and email when available, stored in
+              <code>al_session</code>. <strong>Request access</strong> emails the operator your user
+              ID and email. Used only for access control — not marketing.
+            </p>
+            <p>
+              <strong>Data removal.</strong> Email
+              <a href="mailto:privacy@cultpodcasts.com">privacy@cultpodcasts.com</a> (include your
+              Auth0 email if possible).
+            </p>
+            <p>
+              <strong>Other third parties.</strong> Auth0 (sign-in), plus after access:
+              <a href="https://unpkg.com" target="_blank" rel="noopener noreferrer">unpkg.com</a>
+              (map library) and
+              <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer"
+                >OpenStreetMap</a
+              >
+              (tiles; may log IP/referrer). No advertising or analytics scripts.
+            </p>
+            <p class="privacy-meta">
+              <a
+                href="https://github.com/cultpodcasts/apostate-leaks"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View source and audit on GitHub</a
+              >
+            </p>
+          </section>
+        </div>
+      </details>
+    </aside>
+    </div>
+
+    <div id="map" role="application" aria-label="Aggregated density map"></div>
+    <aside class="legend" id="legend" aria-label="Density legend"></aside>
+    <p class="attribution">
+      Map ©
+      <a href="https://www.openstreetmap.org/copyright" rel="noopener noreferrer"
+        >OpenStreetMap</a
+      >
+      contributors.<span class="attribution__detail">
+        Basemap tiles are requested from OpenStreetMap; their servers may log IP
+        addresses.</span
+      >
+    </p>
+    <script
+      src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/build-info.js"></script>
+    <script src="/map.js" type="module"></script>
+  </body>
+</html>

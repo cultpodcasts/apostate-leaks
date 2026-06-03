@@ -1,0 +1,34 @@
+name = "apostate-leaks-map"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+account_id = "bae3f835f19899c6eee1ec48f2d658cf"
+
+# Runs on `wrangler deploy` only (not `wrangler dev`). Blocks local laptops; Cloudflare CI passes.
+[build]
+command = "node scripts/assert-cloudflare-ci.mjs && npm run build"
+
+[vars]
+AUTH0_BASE_URL = "https://apostateleaks.cultpodcasts.com"
+AUTH0_CALLBACK_URL = "https://apostateleaks.cultpodcasts.com/auth/callback"
+REQUIRED_ROLE = "map-viewer"
+AUTH0_ROLE_CLAIM = "https://api.cultpodcasts.com/roles"
+AUTH0_DISABLED = "false"
+AUTH0_DEBUG = "false"
+# Secrets ACCESS_REQUEST_FROM + ACCESS_REQUEST_EMAIL (Cloudflare Email Service; see AUTH0.md)
+# Optional form link if email is not configured:
+# ACCESS_REQUEST_URL = "https://forms.gle/your-form-id"
+
+[[send_email]]
+name = "EMAIL"
+
+# Map data (cells.geojson, meta.json) — upload via npm run upload:data (never commit to git)
+[[r2_buckets]]
+binding = "MAP_DATA"
+bucket_name = "apostate-leaks-map-data"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+# Required: without this, /index.html is served as a static file and Auth0 never runs.
+# Asset 307s (/index.html → /) are followed inside the worker, not sent to the browser.
+run_worker_first = true

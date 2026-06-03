@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy — Apostate Leaks</title>
+    <meta
+      name="description"
+      content="Privacy policy for sign-in, cookies, and account data on Apostate Leaks."
+    />
+    <link rel="canonical" href="https://apostateleaks.cultpodcasts.com/privacy" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0f1419;
+        color: #e7ecf3;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.55;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        color: #90cdf4;
+        margin: 2rem 0 0.5rem;
+      }
+      a {
+        color: #90cdf4;
+      }
+      code {
+        font-family: ui-monospace, monospace;
+        font-size: 0.85em;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+      }
+      ul,
+      ol {
+        padding-left: 1.25rem;
+      }
+      .back {
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+      }
+      .note {
+        font-size: 0.95rem;
+        opacity: 0.92;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="back"><a href="/">← Back to site</a></p>
+      <h1>Privacy policy</h1>
+      <p class="note">
+        This page covers <strong>sign-in, cookies, and account data</strong> for everyone visiting
+        the site. It does not describe restricted content available only after you are granted
+        access — that information is shown inside the application once you are signed in.
+      </p>
+
+      <section>
+        <h2>Sign-in with Auth0</h2>
+        <p>
+          Parts of this site are <strong>access-controlled</strong>. To reach them you must sign in
+          through
+          <a href="https://auth0.com" target="_blank" rel="noopener noreferrer">Auth0</a> (an
+          identity service we do not operate).
+        </p>
+        <p>When you choose <strong>Sign in</strong>:</p>
+        <ol>
+          <li>Your browser is sent to Auth0’s login page.</li>
+          <li>You authenticate with Auth0 (for example with email, password, or a social provider
+            configured by the site operator).</li>
+          <li>Auth0 redirects you back to this site with authorization data we use to verify your
+            identity and whether you may proceed.</li>
+        </ol>
+        <p>
+          While you are on Auth0’s pages, Auth0 may collect and process personal data and may use
+          cookies or similar technologies on <strong>Auth0’s domain</strong>. That processing is
+          governed by
+          <a href="https://auth0.com/privacy" target="_blank" rel="noopener noreferrer"
+            >Auth0’s privacy policy</a
+          >, not this notice. We do not receive your Auth0 password.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cookies on this site</h2>
+        <p>
+          We use <strong>essential cookies</strong> only for access control and sign-in security —
+          not for advertising, analytics, or cross-site tracking. We do not use
+          <code>localStorage</code> or <code>sessionStorage</code> for authentication.
+        </p>
+        <ul>
+          <li>
+            <strong><code>al_session</code></strong> — set after you sign in (including if you are
+            authenticated but not yet granted access). <strong>Purpose:</strong> remember that you
+            are signed in and whether you may proceed. <strong>Contents:</strong> a signed token
+            with your Auth0 user ID (<code>sub</code>) and your email when Auth0 provides it in the
+            login token. <strong>Duration:</strong> up to 7 days, or until you sign out.
+            <strong>Attributes:</strong> <code>HttpOnly</code> (not readable by page scripts),
+            <code>Secure</code>, <code>SameSite=Lax</code>, path <code>/</code>.
+          </li>
+          <li>
+            <strong><code>al_oauth_state</code></strong> — set briefly when you start sign-in.
+            <strong>Purpose:</strong> prevent cross-site request forgery during the Auth0 redirect.
+            <strong>Duration:</strong> about 10 minutes; cleared when sign-in finishes or fails.
+            <strong>Attributes:</strong> <code>HttpOnly</code>, <code>Secure</code>,
+            <code>SameSite=Lax</code>.
+          </li>
+        </ul>
+        <p>
+          Choosing <strong>Sign out</strong> clears our session cookie and sends you to Auth0 to end
+          your login session there, then returns you to this site.
+        </p>
+      </section>
+
+      <section>
+        <h2>Account data we hold</h2>
+        <p>
+          <strong>Email addresses and user IDs.</strong> When you <strong>attempt to sign in</strong>,
+          we receive your Auth0 user identifier (<code>sub</code>) and, if your Auth0 profile
+          includes it, your <strong>email address</strong>. We store these in the
+          <code>al_session</code> cookie described above. If you are not granted access and use
+          <strong>Request access</strong>, we email the site operator your user ID and email (when
+          available) so they can review your request. We use this information only to operate access
+          control and respond to access requests — not for marketing or unrelated purposes.
+        </p>
+        <p>We do not run on-page analytics on this site.</p>
+        <p>
+          <strong>Data removal.</strong> To ask us to delete personal data we hold about you from
+          sign-in, cookies, access requests, or related records, email
+          <a href="mailto:privacy@cultpodcasts.com">privacy@cultpodcasts.com</a>. Include enough
+          detail for us to identify your request (for example the email address you used with Auth0).
+        </p>
+      </section>
+
+      <section>
+        <h2>Your rights and contact</h2>
+        <p>
+          For questions about this policy or to exercise rights relating to your personal data,
+          contact
+          <a href="mailto:privacy@cultpodcasts.com">privacy@cultpodcasts.com</a>. Use the same
+          address for data-removal requests (see <strong>Data removal</strong> above).
+        </p>
+      </section>
+
+      <section>
+        <h2>Source code</h2>
+        <p>
+          Site code, authentication, and privacy-related behaviour are published in the open
+          repository
+          <a
+            href="https://github.com/cultpodcasts/apostate-leaks"
+            target="_blank"
+            rel="noopener noreferrer"
+            >cultpodcasts/apostate-leaks</a
+          >
+          on GitHub.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

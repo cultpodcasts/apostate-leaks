@@ -1,0 +1,25 @@
+source-data/*
+!.gitignore
+
+# Node
+offline-pipeline/node_modules/
+worker/node_modules/
+
+# Offline secrets / intermediates
+offline-pipeline/dist/
+offline-pipeline/.cache/
+offline-pipeline/.state/
+
+# Worker
+worker/.wrangler/
+worker/.dev.vars
+.cookie
+worker/public/build-info.json
+worker/public/build-info.js
+worker/public/map.js
+worker/public/map.js.map
+
+# Published map data — never commit (GitHub would preview GeoJSON); upload to R2 instead
+worker/public/data/*
+!worker/public/data/.gitkeep
+!worker/public/data/README.md

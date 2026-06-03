@@ -1,0 +1,25 @@
+# Copy to .dev.vars (gitignored). Do not commit.
+#
+# Used by:
+#   wrangler dev          — local Worker (set AUTH0_DISABLED=true to skip login)
+#   npm run secrets:auth0 — with secrets filled in, or use interactive prompts
+#                         (script uploads Auth0/session secrets; optional ACCESS_REQUEST_* )
+#
+# Production secrets live in Cloudflare (npm run secrets:auth0), not in git.
+# Non-secret settings (callback URL, REQUIRED_ROLE, etc.) are in wrangler.toml [vars].
+
+# --- Local development ---
+AUTH0_DISABLED=true
+
+# --- Auth0 secrets (hostname only for DOMAIN — no https://) ---
+# Uncomment when testing login locally (AUTH0_DISABLED=false) or before --from-file upload.
+# AUTH0_DOMAIN=your-tenant.eu.auth0.com
+# AUTH0_CLIENT_ID=
+# AUTH0_CLIENT_SECRET=
+# SESSION_SECRET=
+# ACCESS_REQUEST_EMAIL=   # optional — inbox for access-request emails (uploaded as secret)
+# ACCESS_REQUEST_FROM=    # optional — Email Service sender address (uploaded as secret)
+
+# --- Local Auth0 URLs (only when AUTH0_DISABLED=false; add callback in Auth0 app) ---
+# AUTH0_BASE_URL=http://localhost:8787
+# AUTH0_CALLBACK_URL=http://localhost:8787/auth/callback

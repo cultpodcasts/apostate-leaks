@@ -1,0 +1,16 @@
+{
+  "name": "Apostate Leaks",
+  "short_name": "Apostate Leaks",
+  "description": "Privacy-preserving map of aggregated supportive responses",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0d2847",
+  "theme_color": "#0d2847",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
